@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <form action="" id="login-form" class="w-5/12 mx-auto mt-10 bg-lime-400 p-10 rounded-lg text-center">
+        <h1 class="text-3xl font-bold">Form</h1>
+        <input type="email" id="email" placeholder="Enter Email Address" class="border-2 border-lime-300 p-2 mt-3 rounded-lg w-full block">
+        <p id="error-msg-email" class=" hidden text-left text-red-500">*The Email field is required.</p>
+        <input type="password" id="password" placeholder="Enter Password" class="border-2 border-gray-300 p-2 mt-3 rounded-lg w-full block">
+        <p id="error-msg-password" class=" hidden text-left text-red-500">*The Password field is required.</p>
+        <button class="bg-blue-500 text-white p-2 rounded-lg w-1/2 mx-auto block mt-3">Login</button>
+    </form>
+
+    <script>
+        
+            document.getElementById('login-form').addEventListener('submit',function(e)
+        {
+            e.preventDefault();
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let errorEmail = document.getElementById('error-msg-email');
+            let errorPass = document.getElementById('error-msg-password');
+            if(email == '')
+            {
+                errorEmail.classList.remove('hidden');
+                return;
+            }
+            else
+            {
+                errorEmail.classList.add('hidden');
+            }
+            if(password == '')
+            {
+                errorPass.classList.remove('hidden');
+                return;
+            }
+            else
+            {
+                errorPass.classList.add('hidden');
+            }
+            if(password.length < 5)
+            {
+                errorPass.innerHTML = '* The password field must be at least of 5 characters.';
+                errorPass.classList.remove('hidden');
+            }
+            else
+            {
+                errorPass.classList.add('hidden');
+            }
+
+        });
+        
+    </script>
+</body>
+</html>

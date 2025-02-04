@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="n1" placeholder="Enter first Number">
+    <br>
+    <input type="text" id="n2" placeholder="Enter 2nd number">
+    <br>
+    <button onclick="sum()">SUM</button>
+    <button onclick="sub()">SUBTRACTION</button>
+
+    <p id="result"></p>
+
+</body>
+<script>
+    function sum()
+    {
+        let n1=document.getElementById('n1').value;
+        let n2=document.getElementById('n2').value;
+        let result=parseInt(n1)+parseInt(n2);
+        document.getElementById('result').innerHTML='the sum is'+result;
+    }
+    function sub()
+    {
+        let n1=document.getElementById('n1').value;
+        let n2=document.getElementById('n2').value;
+        let result=n1-n2;
+        document.getElementById('result').innerHTML='the difference is'+result;
+    }
+</script>
+
+</html>

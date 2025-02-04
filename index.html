@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <script>
+        document.write('hello worlds');
+        document.write('<h2>hello world</h2>');
+        console.log('hello');
+        //alert('hello world');
+        document.getElementById('mydiv').innerHTML='hello worls in document';
+        document.getElementById('mydiv').style.backgroundColor='blue';
+        document.getElementById('mydiv').style.color='white';
+        //var x=10;
+        let x=10;
+        let y=20;
+        let z=x+y;
+        document.write("the sum is"+z+'<br>');
+       // document.write('<br>');
+        document.write('the sum of'+x+'and'+y+'is'+z);
+        document.write('<br>');
+        document.write(`the sum of ${x} and ${y} is ${z}`);
+
+        function myfunction(){
+
+        }
+    </script>
+</body>
+</html>

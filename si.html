@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="principal" placeholder="enter principal amount">
+    <br>
+    <input type="text" id="rate" placeholder="enter rate of interest.">
+    <br>
+    <input type="text" id="time" placeholder="enter time in year:">
+    <br>
+    <button onclick="si()">Calculate Simple Interest</button>
+    <p id="result"></p>
+    
+    <script>
+        function si()
+        {
+            let p=document.getElementById('principal').value;
+            let t=document.getElementById('time').value;
+            let r=document.getElementById('rate').value;
+            let result=(p*r*t)/100;
+            document.getElementById('result').innerHTML='the simple interest is'+result;
+        }
+    </script>
+</body>
+</html>
